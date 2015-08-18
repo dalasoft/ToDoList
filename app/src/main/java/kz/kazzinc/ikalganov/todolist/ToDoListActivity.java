@@ -27,7 +27,8 @@ public class ToDoListActivity extends AppCompatActivity implements NewItemFragme
 
         todoItems = new ArrayList<>();
 
-        aa = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, todoItems);
+        int resID = R.layout.totolist_item;
+        aa = new ArrayAdapter<>(this, resID, todoItems);
 
         todoListFragment.setListAdapter(aa);
     }
