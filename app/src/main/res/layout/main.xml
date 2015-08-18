@@ -5,15 +5,15 @@
     tools:context=".ToDoListActivity"
     android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/myEditText"
+    <fragment
+        android:name="kz.kazzinc.ikalganov.todolist.NewItemFragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/addItemHint"
-        android:contentDescription="@string/addItemContentDescription"/>
-    <ListView
-        android:id="@+id/myListView"
+        android:id="@+id/NewItemFragment"/>
+    <fragment
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:name="kz.kazzinc.ikalganov.todolist.ToDoListFragment"
+        android:id="@+id/TodoListFragment"/>
 
 </LinearLayout>
