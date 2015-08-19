@@ -48,7 +48,7 @@ public class TodoListItemView extends TextView {
     protected void onDraw(Canvas canvas) {
         canvas.drawColor(paperColor);
 
-        canvas.drawLine(0, 0, getMeasuredHeight(), 0, linePaint);
+        canvas.drawLine(0, getMeasuredHeight(), 0, 0, linePaint);
         canvas.drawLine(0, getMeasuredHeight(), getMeasuredWidth(), getMeasuredHeight(), linePaint);
 
         canvas.drawLine(margin, 0, margin, getMeasuredHeight(), marginPaint);
