@@ -13,7 +13,7 @@ import java.util.ArrayList;
 
 public class ToDoListActivity extends AppCompatActivity implements NewItemFragment.OnNewItemAddedListener {
 
-    private ArrayAdapter<ToDoItem> aa;
+    private ToDoItemAdapter aa;
     private ArrayList<ToDoItem> todoItems;
 
     @Override
@@ -28,7 +28,7 @@ public class ToDoListActivity extends AppCompatActivity implements NewItemFragme
         todoItems = new ArrayList<>();
 
         int resID = R.layout.totolist_item;
-        aa = new ArrayAdapter<>(this, resID, todoItems);
+        aa = new ToDoItemAdapter(this, resID, todoItems);
 
         todoListFragment.setListAdapter(aa);
     }
