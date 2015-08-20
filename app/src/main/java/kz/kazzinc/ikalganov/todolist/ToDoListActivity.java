@@ -13,8 +13,8 @@ import java.util.ArrayList;
 
 public class ToDoListActivity extends AppCompatActivity implements NewItemFragment.OnNewItemAddedListener {
 
-    private ArrayAdapter<String> aa;
-    private ArrayList<String> todoItems;
+    private ArrayAdapter<ToDoItem> aa;
+    private ArrayList<ToDoItem> todoItems;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +34,8 @@ public class ToDoListActivity extends AppCompatActivity implements NewItemFragme
     }
 
     public void onNewItemAdded(String newItem) {
-        todoItems.add(newItem);
+        ToDoItem newToDoItem = new ToDoItem(newItem);
+        todoItems.add(0, newToDoItem);
         aa.notifyDataSetChanged();
     }
 }
