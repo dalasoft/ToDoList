@@ -16,6 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <provider
+            android:authorities="kz.kazzinc.ikalganov.todoprovider"
+            android:name=".ToDoContentProvider"/>
     </application>
 
 </manifest>
